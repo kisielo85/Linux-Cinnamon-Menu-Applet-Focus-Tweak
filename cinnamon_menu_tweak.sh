@@ -1,6 +1,15 @@
 #!/bin/sh
 FILE_PATH=$(find /usr/share/cinnamon -name "popupMenu.js")
 echo "$FILE_PATH"
+BACKUP_PATH="${FILE_PATH%.js}_backup.js"
+
+if [ ! -f "$BACKUP_PATH" ]; then
+  echo "saving backup to: $BACKUP_PATH"
+  sudo cp $FILE_PATH $BACKUP_PATH
+else 
+  echo "backup arleady exists"
+fi
+
 line_num=0
 found=0
 depth=0
@@ -55,7 +64,11 @@ if [ $? -ne 0 ]; then
     exit
 fi
 
-echo "\nfile patched, restarting cinnamon in 5 seconds.."
-sleep 5
+echo "\nfile patched, restarting cinnamon in 5.."
+for i in 4 3 2 1; do sleep 1 && echo $i..; done
 
 nohup cinnamon --replace > /dev/null 2>&1 &
+
+echo "done."
+echo "\nto restore changes paste this command:"
+echo "\nsudo cp $BACKUP_PATH $FILE_PATH && nohup cinnamon --replace > /dev/null 2>&1 &"
