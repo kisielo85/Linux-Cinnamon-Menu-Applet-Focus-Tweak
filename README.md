@@ -9,6 +9,8 @@ A little tweak to make the Cinnamon Menu behave a bit more Windows-like
 #### Option 1:
 download and run [cinnamon_menu_tweak.sh](https://github.com/kisielo85/Linux-Cinnamon-Menu-Applet-Focus-Tweak/blob/main/cinnamon_menu_tweak.sh)
 
+``sh cinnamon_menu_tweak.sh``
+<br><br>
 #### Option 2
 edit ``/usr/share/cinnamon/js/ui/popupMenu.js``
 
