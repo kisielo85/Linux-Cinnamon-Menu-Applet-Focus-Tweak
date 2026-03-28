@@ -67,7 +67,7 @@ fi
 echo "\nfile patched, restarting cinnamon in 5.."
 for i in 4 3 2 1; do sleep 1 && echo $i..; done
 
-nohup cinnamon --replace > /dev/null 2>&1 &
+cinnamon --replace >/dev/null 2>&1 &
 
 echo "done."
 echo "\nto restore changes paste this command:"
