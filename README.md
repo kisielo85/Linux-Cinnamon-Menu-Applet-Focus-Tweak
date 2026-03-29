@@ -6,12 +6,16 @@ A little tweak to make the Cinnamon Menu behave a bit more Windows-like
 
 ## how to use
 
-#### Option 1:
-download and run [cinnamon_menu_tweak.sh](https://github.com/kisielo85/Linux-Cinnamon-Menu-Applet-Focus-Tweak/blob/main/cinnamon_menu_tweak.sh)
+#### Option 1
+run this command:<br>
+```curl -s https://raw.githubusercontent.com/kisielo85/Menu-focus-tweak-for-Cinnamon/refs/heads/main/cinnamon_menu_tweak.sh | sh```
+<br><br>
+#### Option 2
+manually download and run [cinnamon_menu_tweak.sh](https://github.com/kisielo85/Linux-Cinnamon-Menu-Applet-Focus-Tweak/blob/main/cinnamon_menu_tweak.sh)
 
 ``sh cinnamon_menu_tweak.sh``
 <br><br>
-#### Option 2
+#### Option 3
 edit ``/usr/share/cinnamon/js/ui/popupMenu.js``
 
 in ``_onEventCapture`` (line 3666)
