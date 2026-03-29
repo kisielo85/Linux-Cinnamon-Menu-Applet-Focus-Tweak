@@ -70,5 +70,5 @@ for i in 4 3 2 1; do sleep 1 && echo $i..; done
 cinnamon --replace >/dev/null 2>&1 &
 
 echo "done."
-echo "\nto restore changes paste this command:"
-echo "\nsudo cp $BACKUP_PATH $FILE_PATH && nohup cinnamon --replace > /dev/null 2>&1 &"
+echo "\nto revert changes paste this command:"
+echo "\nsudo cp $BACKUP_PATH $FILE_PATH && cinnamon --replace >/dev/null 2>&1 &"
